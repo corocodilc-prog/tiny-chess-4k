@@ -1,9 +1,9 @@
 import json as J,os
 from urllib.request import Request,urlopen
-V=(0,100,320,335,500,900,0)
+V=(0,100,320,335,500,950,0)
 T="KKKKKKKKKKKPKPPZKPU_PPUdUU_iKKKK##--#7KK-KUZ-PZ_-KZ_-PUZ#7KP##--7AAAAKKKAKPUAPPUAKUUAUUUAPKK7AAAKKKKPUUUFKKKFKKKFKKKFKKKFKKKKKKP7AAFAKKKAKPPFKPPFKPPAPPPAKKK7AAF-###-###-###-###7--#A777__KK_iUK"
 MT=10**5
-NC=120000
+NC=125000
 N=0
 TT={}
 KN=(-33,-31,-18,-14,14,18,31,33)
@@ -68,7 +68,7 @@ def F(b,w):
    a=abs(p);r=i>>4;f=min(i&7,7-(i&7))
    v=V[a]+ord(T[(a-1)*32+(r if p>0 else 7-r)*4+f])-75
    s+=v if p>0 else -v
- return s*w+10
+ return s*w+12
 def O(m,b,t):return MT if m==t else 10000+abs(v) if(v:=b[m>>7&127])else 0
 def S(b,w,d,a,z,p,e,k):
  global N
